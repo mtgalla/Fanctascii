@@ -5,5 +5,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  console.log(choices.choice);
   return choices;
 };
