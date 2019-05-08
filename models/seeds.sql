@@ -1,5 +1,6 @@
 INSERT INTO choices (choice,createdAt,updatedAt)
 VALUES
+('starting point',NOW(),NOW()),
 ('open fancy door',NOW(),NOW()),
 ('open rotted door',NOW(),NOW()),
 ('open suspicious door',NOW(),NOW()),
