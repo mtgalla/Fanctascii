@@ -1,4 +1,6 @@
 var db = require("../models");
+// var path = require("path");
+// Do we need to require path for html routing as well?
 
 module.exports = function(app) {
   // Load index page
