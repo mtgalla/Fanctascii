@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "mtgalla123",
+    "password": "Password1",
     "database": "storydb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Password1",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

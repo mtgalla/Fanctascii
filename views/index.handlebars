@@ -1,36 +1,28 @@
 <div id="home">
   <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+    <div class="row titleStuff">
+      <div class="titlesCredits col-8 offset-2">
+        <h1 id="gameTitle">FantASCII</h1>
+        <h3 id="subtitle">A Choose Your Own Adventure Game</h2>
+        <h3 id="credits">Jesse Chen | Matt Gallia | Sam Jacob | Greg Sorkin</h3>
       </div>
+    </div>
+    <div class="row backstory">
+      <div class="backstoryBlock">
+        <p>You are a young blacksmith from a small community of woodcutters. Deep within the forest of your childhood, there exists an ancient mausoleum with untold mysteries. But you harbor a deep resentment of the forest...</p>
+        <p>The edge of the forest is a relatively safe – at least compared to the deeper parts of the forest’s old growth. Every so often, wandering adventurers pass through looking for treasure, but none have ever returned.</p>
+        <p>Your village provisions have run dry and desperation begins to set in. You join a scouting party to enter the mausoleum as their last hope.</p>
+      </div>
+    </div>
+    <div class="row jQueryTerm">
+      {{!-- jQueryTerminal Window here! ...somehow... --}}
     </div>
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+{{!-- jQuery --}}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+{{!-- jQuery Terminal Hookup --}}
+<script src="https://unpkg.com/jquery.terminal@2.5.0/js/jquery.terminal.min.js"></script>
+<link href="https://unpkg.com/jquery.terminal@2.5.0/css/jquery.terminal.min.css"/>
+<link type="text/javascript" href="../../public/js/jQueryTerm.js"/>

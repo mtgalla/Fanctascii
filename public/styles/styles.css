@@ -1,3 +1,62 @@
-.list-group-item {
+/* .list-group-item {
   line-height: 2.5;
+} */
+
+body {
+  background-image: url("../assets/img/tombBG.jpg");
+  background-color: black;
+  background-repeat: no repeat; 
+  background-size: cover;
+  line-height: 1.5px;
+  letter-spacing: .16px;
+  align-content: center;
+}
+
+@font-face {
+  font-family: "Moria Citadel";
+  src: url("../assets/fonts/MoriaCitadel.TTF");
+}
+
+@font-face {
+  font-family: "Atlast of the Magi"; 
+  src: url("../assets/fonts/Atlas of the Magi.ttf")
+}
+
+#gameTitle {
+  font-family: "Moria Citadel";
+  font-size: 24px;
+  align-content: center;
+  color: crimson;
+}
+
+#subtitle {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 14px;
+  align-content: center;
+  color: rgb(102, 52, 52);
+}
+
+#credits {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 12px;
+  align-content: center;
+  color: rgb(102, 52, 52);
+  font-style: italic;
+}
+
+.backstoryBlock {
+  background-color: rgba(151, 135, 135, 0.74);
+  padding: 25px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Atlas of the Magi";
+  font-size: 14px;
+  text-align: center;
+  color: yellow;
+}
+
+.jQueryTerm {
+  width: 60%;
+  opacity: 0.8;
 }
