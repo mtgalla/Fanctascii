@@ -36,33 +36,28 @@ module.exports = function(app) {
       res.json(dbchoices);
     });
   });
-  // POST route for saving a new post
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-  // DELETE route for deleting posts
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
+  // // POST route for saving a new post
+  // app.post("/api/examples", function(req, res) {
+  //   db.Example.create(req.body).then(function(dbExamples) {
+  //     res.json(dbExamples);
+  //   });
+  // });
+  // // DELETE route for deleting posts
+  // app.delete("/api/examples/:id", function(req, res) {
+  //   db.Example.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbExamples) {
+  //     res.json(dbExamples);
+  //   });
+  // });
   // PUT route for updating character
   app.put("/api/characters/:id", function(req, res) {
-    db.characters.update(
-      req.body.choice_id,
-      {
-        where: {
-          id: req.params.id
-        }
-      }).then(function(dbcharacters) {
-      res.json(dbcharacters);
-    });
+    console.log(req.body.id);
+    db.characters.update(req.body.choice_id, { where: { id: req.params.id } })
+      .then(function(dbcharacters) {
+        res.json(dbcharacters);
+      });
   });
 };
