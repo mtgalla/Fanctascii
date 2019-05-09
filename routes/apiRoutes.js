@@ -23,15 +23,15 @@
 //   });
 // };
 
-// Put route for updating an example
-// app.put("/api/examples", function(req, res) {
-//   db.Example.update(
-//     req.body,
-//     {
-//       where: {
-//         id: req.body.id
-//       }
-//     }).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-// });
+//   // Put route for updating an example
+//   app.put("/api/examples", function(req, res) {
+//     db.Example.update(
+//       req.body,
+//       {
+//         where: {
+//           id: req.body.id
+//         }
+//       }).then(function(dbExample) {
+//         res.json(dbExample);
+//       });
+//   });
