@@ -12,7 +12,7 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the characters
+// GET route for getting all of the characters
   app.get("/api/characters/", function(req, res) {
     db.characters.findAll({})
     .then(function(dbcharacters) {
@@ -53,16 +53,16 @@ module.exports = function(app) {
     });
   });
 
-  // PUT route for updating posts
-  // app.put("/api/characters", function(req, res) {
-  //   db.characters.update(
-  //     req.body,
-  //     {
-  //       where: {
-  //         id: req.body.id
-  //       }
-  //     }).then(function(dbCharacter) {
-  //     res.json(dbCharacter);
-  //   });
-  // });
+  // PUT route for updating character
+  app.put("/api/characters/:id", function(req, res) {
+    db.characters.update(
+      req.body.choice_id,
+      {
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbcharacters) {
+      res.json(dbcharacters);
+    });
+  });
 };
