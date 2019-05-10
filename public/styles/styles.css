@@ -1,6 +1,5 @@
-body {
+.container {
   background-image: url("../assets/img/tombBG.jpg");
-  background-color: black;
   background-repeat: no repeat; 
   background-size: cover;
   line-height: 1.5;
@@ -23,21 +22,21 @@ body {
   font-family: "Moria Citadel";
   font-size: 50px;
   text-align: center;
-  color: crimson;
+  color: rgb(255, 0, 51);
 }
 
 #subtitle {
   font-family: 'Cormorant Infant', serif;
   font-size: 14px;
   align-content: center;
-  color: rgb(102, 52, 52);
+  color: white;
 }
 
 #credits {
   font-family: 'Cormorant Infant', serif;
   font-size: 12px;
   align-content: center;
-  color: rgb(102, 52, 52);
+  color: white;
   font-style: italic;
 }
 
@@ -45,10 +44,9 @@ body {
   background-color: rgba(151, 135, 135, 0.74);
   padding: 25px;
   width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   font-family: "Atlas of the Magi";
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
   color: yellow;
 }
