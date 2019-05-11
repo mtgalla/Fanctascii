@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="../public/js/index.js"></script>
 
 
    <!-- CSS -->
@@ -21,7 +22,7 @@
 </head>
 
 <body class="container">
-  
+
   <div class="row">
     
     <div class="col-md-12" id="top" href="#1"> 
@@ -59,39 +60,46 @@
   <div class="row terminal" id="game" href="#2">
 
     <div class="col-12 terminal" id="scene1">
+
       <p class="row">
         While entering the mausoleum, your entire party is wiped out and you are the sole survivor. You enter a marble
         hallway with 3 doors at the end. Which door do you choose?
       </p>
       
-      <div class="row center-buttons">
+      <div class="row">
         
         <button type="button" class="btn btn-dark col-lg-3 col-md-12 firstDoors" id="2">Fancy Door</button>
         <button type="button" class="btn btn-dark col-lg-3 col-md-12 firstDoors" id="3">Rotted Door</button>
-        <button type="button" class="btn btn-dark col-lg-3 col-md-12 firstDoors" id="4">Suspicious Door</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 firstDoors toast" id="4">Suspicious Door</button>
         
       </div>
 
     </div>
 
     <div class="col-12 terminal" id="scene2">
+
       <p class="row">
         You continue safely for now. Later, you enter a chamber. The door behind you catches fire and engulfs the room.
         You run for the only other exit, but notice a pendant on a table. What do you do?
       </p>
       
       <div class="row">
-        
+
         <button type="button" class="btn btn-dark col-lg-3 col-md-12 secondDoors" id="5">Take Pendant!</button>
-        <button type="button" class="btn btn-dark col-lg-3 col-md-12 secondDoors" id="6">ESCAPE!</button>
-        
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 secondDoors toast" id="6">ESCAPE!</button>
+
       </div>
 
     </div>
 
     <div class="col-12 terminal" id="scene3">
-      <p class="row">
+
+        <p class="row">
         You are protected from fire!
+      </p>
+
+      <p class="row" id="sword">
+        You are blessed with a legendary sword!
       </p>
 
       <p class="row">
@@ -119,6 +127,34 @@
                `B'\)                  ///,-'~`__--^-  |-------~~~~^'
                /^>                           ///,--~`-\
               `  `             
+      </PRE>
+
+    </div>
+
+    <div class="col-12 terminal" id="die">
+
+      <p class="row">
+        Teeth appear as you enter the abyss and you realize your mistake. A mimic eats your face off and is satisfied with its
+        trick!
+      </p>
+      
+      <div class="row">
+        <button type="button" class="btn btn-danger col-lg-3 col-md-12">You Died</button>
+      </div>
+
+    </div>
+
+    <div class="col-12 terminal" id="scene2.1">
+
+      <p class="row">
+        A door grumbles as you enter. Eventually, you come across an underground river. On the banks, you notice a covered boat. How do you get across?
+      </p>
+      
+      <div class="row">
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12" id="x">Swim Across</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast" id="toast">Go in the Boat</button>
+      </div>
+
     </div>
 
   </div>
@@ -130,21 +166,51 @@
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2").hidden = true;
       document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = true;
+      document.getElementById("scene2.1").hidden = true;
     };
 
-    
+
     document.getElementById("startGame").addEventListener("click", function() {
     document.getElementById("scene1").hidden = false;
     });
 
     document.getElementById("3").addEventListener("click", function() {
-    document.getElementById("scene2").hidden = false;
     document.getElementById("scene1").hidden = true;
+    document.getElementById("scene2").hidden = false;
     });
 
     document.getElementById("5").addEventListener("click", function() {
-    document.getElementById("scene3").hidden = false;
     document.getElementById("scene2").hidden = true;
+    document.getElementById("scene3").hidden = false;
+    document.getElementById("pendant").hidden = false;
+    document.getElementById("sword").hidden = true;
+    });
+
+    /*Buttons that kill you*/
+    /*We realize this can be in a for loop, but we didn't want to break anything*/
+    document.getElementsByClassName("toast")[0].addEventListener("click", function() {
+      document.getElementById("scene1").hidden = true;
+      document.getElementById("scene2").hidden = true;
+      document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = false;
+    });
+    document.getElementsByClassName("toast")[1].addEventListener("click", function() {
+      document.getElementById("scene1").hidden = true;
+      document.getElementById("scene2").hidden = true;
+      document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = false;
+    });
+    document.getElementsByClassName("toast")[2].addEventListener("click", function() {
+      document.getElementById("scene1").hidden = true;
+      document.getElementById("scene2").hidden = true;
+      document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = false;
+    });
+
+    document.getElementById("2").addEventListener("click", function() {
+    document.getElementById("scene1").hidden = true;
+    document.getElementById("scene2.1").hidden = false;
     });
    
   </script>
