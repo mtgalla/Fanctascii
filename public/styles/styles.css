@@ -19,8 +19,9 @@
 }
 
 #gameTitle {
+  margin: 0px;
   font-family: "Moria Citadel";
-  font-size: 50px;
+  font-size: 100px;
   text-align: center;
   align-content: center;
   color: rgb(255, 0, 51);
