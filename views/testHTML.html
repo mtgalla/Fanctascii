@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="../public/js/index.js"></script>
+
+   <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="../public/styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../public/styles/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <title>Project 2, Team 6 | FantASCII</title>
+
+</head>
+
+<body class="container">
+  <div class="row">
+    
+    <div class="col-md-12" id="top" href="#1"> 
+      <h1 id="gameTitle">FantASCII</h1>
+      <h3 id="subtitle">A Choose Your Own Adventure Game</h2>
+      <h3 id="credits">Jesse Chen | Matt Gallardo | Sam Jacob | Greg Sorkin</h3>
+    </div> 
+
+  </div>
+
+  <div class="row backstoryBlock">
+    <div class="col-md-12">
+      
+      <p>
+        You are a young blacksmith from a small community of woodcutters. Deep within the forest of your childhood,
+        there exists an ancient mausoleum with untold mysteries. But you harbor a deep resentment of the forest.
+      </p>
+
+      <p>
+        The edge of the forest is relatively safe – at least compared to the deeper parts of the forest’s old growth.
+        Every so often, wandering adventurers pass through looking for treasure, but none have ever returned.
+      </p>
+
+      <p>
+        Your village provisions have run dry and desperation begins to set in. You join a scouting party to enter the
+        mausoleum as their last resort . . . . . . . . . . . . . . . . . . . . . .
+      </p>
+
+      <button type="button" class="btn btn-warning" id="startGame">Click to Start</button>
+            
+    </div>
+
+  </div>
+
+  <div class="row terminal" id="game" href="#2">
+    <div class="col-12 terminal" id="scene1">
+
+      <p class="row">
+        While entering the mausoleum, your entire party is wiped out and you are the sole survivor. You enter a marble
+        hallway with 3 doors at the end. Which door do you choose?
+      </p>
+      
+      <div class="row">
+        
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12">Fancy Door</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 rotted-door" id="3">Rotted Door</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast">Suspicious Door</button>
+        
+      </div>
+
+    </div>
+
+    <div class="col-12 terminal" id="scene2">
+
+      <p class="row">
+        You continue safely for now. Later, you enter a chamber. The door behind you catches fire and engulfs the room.
+        You run for the only other exit, but notice a pendant on a table. What do you do?
+      </p>
+      
+      <div class="row">
+
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12" id="5">Take Pendant!</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast">ESCAPE!</button>
+
+      </div>
+
+    </div>
+
+    <div class="col-12 terminal" id="scene3">
+
+      <p class="row" id="pendant">
+        You are protected from fire!
+      </p>
+
+      <p class="row" id="sword">
+        You are blessed with a legendary sword!
+      </p>
+
+      <p class="row">
+        You make your way through mazes and slay more monsters, where it all was a life changing experience. Now deep
+        inside the caverns of the mausoleum, you find a dragon guarding the treasure, so many have died for. Your time has come!          
+      </p>
+      
+      <PRE class="green">
+                                                       _   __,----'~~~~~~~~~`-----.__
+                                          .  .    `//====-              ____,-'~`
+                          -.            \_|// .   /||\\  `~~~~`---.___./
+                    ______-==.       _-~o  `\/    |||  \\           _,'`
+              __,--'   ,=='||\=_    ;_,_,/ _-'|-   |`\   \\        ,'
+           _-'      ,='    | \\`.    '',/~7  /-   /  ||   `\.     /
+         .'       ,'       |  \\  \_  "  /  /-   /   ||      \   /
+        / _____  /         |     \\.`-_/  /|- _/   ,||       \ /
+       ,-'     `-|--'~~`--_ \     `==-/  `| \'--===-'       _/`
+                 '         `-|      /|    )-'\~'      _,--"'
+                             '-~^\_/ |    |   `\_   ,^             /\
+                                  /  \     \__   \/~               `\__
+                              _,-' _/'\ ,-'~____-'`-/                 ``===\
+                             ((->/'    \|||' `.     `\.  ,                _||
+               ./                       \_     `\      `~---|__i__i__\--~'_/
+              <_n_                     __-^-_    `)  \-.______________,-~'
+               `B'\)                  ///,-'~`__--^-  |-------~~~~^'
+               /^>                           ///,--~`-\
+              `  `             
+      </PRE>
+
+    </div>
+
+    <div class="col-12 terminal" id="die">
+
+      <p class="row">
+        Teeth appear as you enter the abyss and you realize your mistake. A mimic eats your face off and is satisfied with its
+        trick!
+      </p>
+      
+      <div class="row">
+        <button type="button" class="btn btn-danger col-lg-3 col-md-12">You Died</button>
+      </div>
+
+    </div>
+
+    <div class="col-12 terminal" id="scene2.1">
+
+      <p class="row">
+        A door grumbles as you enter. Eventually, you come across an underground river. On the banks, you notice a covered boat. How do you get across?
+      </p>
+      
+      <div class="row">
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12" id="x">Swim Across</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast" id="toast">Go in the Boat</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+
+    //only show the intro on load
+    window.onload = function() {
+      document.getElementById("scene1").hidden = true;
+      document.getElementById("scene2").hidden = true;
+      document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = true;
+      document.getElementById("scene2.1").hidden = true;
+    };
+
+    document.getElementById("startGame").addEventListener("click", function() {
+    document.getElementById("scene1").hidden = false;
+    });
+
+    document.getElementById("3").addEventListener("click", function() {
+    document.getElementById("scene1").hidden = true;
+    document.getElementById("scene2").hidden = false;
+    });
+
+    document.getElementById("5").addEventListener("click", function() {
+    document.getElementById("scene2").hidden = true;
+    document.getElementById("scene3").hidden = false;
+    document.getElementById("pendant").hidden = false;
+    document.getElementById("sword").hidden = true;
+    });
+
+    /*We realize this can be in a for loop, but we didn't want to break anything*/
+    document.getElementsByClassName("toast")[0].addEventListener("click", function() {
+      document.getElementById("scene1").hidden = true;
+      document.getElementById("scene2").hidden = true;
+      document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = false;
+    });
+    document.getElementsByClassName("toast")[1].addEventListener("click", function() {
+      document.getElementById("scene1").hidden = true;
+      document.getElementById("scene2").hidden = true;
+      document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = false;
+    });
+    document.getElementsByClassName("toast")[2].addEventListener("click", function() {
+      document.getElementById("scene1").hidden = true;
+      document.getElementById("scene2").hidden = true;
+      document.getElementById("scene3").hidden = true;
+      document.getElementById("die").hidden = false;
+    });
+   
+  </script>
+
+  <!-- jQuery Terminal Hookup, we tried but it was too complicated.
+  <script src="https://unpkg.com/jquery.terminal@2.5.0/js/jquery.terminal.min.js"></script>
+  <link href="https://unpkg.com/jquery.terminal@2.5.0/css/jquery.terminal.min.css"/>
+  <link type="text/javascript" href="../public/js/jQueryTerm.js"/>
+  -->
+
+</body>
+
+</html>
