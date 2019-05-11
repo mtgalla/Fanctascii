@@ -11,6 +11,7 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(express.static("./"));
 
 // Handlebars
 app.engine(
@@ -24,7 +25,7 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/postApiRoutes")(app);
 // require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 

@@ -1,17 +1,23 @@
-// var db = require("../models");
-// // var path = require("path");
+//var db = require("../models");
+var path = require("path");
 // // Do we need to require path for html routing as well?
 
-// module.exports = function(app) {
-//   // Load index page
-//   app.get("/", function(req, res) {
-//     db.Example.findAll({}).then(function(dbExamples) {
-//       res.render("index", {
-//         msg: "Welcome!",
-//         examples: dbExamples
-//       });
-//     });
-//   });
+module.exports = function(app) {
+  // // Load index page
+  // app.get("/", function(req, res) {
+  //   db.choices.findAll({}).then(function(dbchoices {
+  //     res.render("index", {
+  //       msg: "Welcome!",
+  //       examples: dbchoices
+  //     });
+  //   });
+  // });
+
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/testHTML.html"));
+  });
+
+  }
 
 //   // Load example page and pass in an example by id
 //   app.get("/example/:id", function(req, res) {
