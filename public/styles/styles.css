@@ -14,14 +14,15 @@
 }
 
 @font-face {
-  font-family: "Atlas of the Magi"; 
-  src: url("../assets/fonts/Atlas of the Magi.ttf")
+  font-family: "Atland"; 
+  src: url("../assets/fonts/AtlandBB_r.otf")
 }
 
 #gameTitle {
   font-family: "Moria Citadel";
   font-size: 50px;
   text-align: center;
+  align-content: center;
   color: rgb(255, 0, 51);
 }
 
@@ -29,6 +30,7 @@
   font-family: 'Cormorant Infant', serif;
   font-size: 14px;
   align-content: center;
+  text-align: center;
   color: white;
 }
 
@@ -36,6 +38,7 @@
   font-family: 'Cormorant Infant', serif;
   font-size: 12px;
   align-content: center;
+  text-align: center;
   color: white;
   font-style: italic;
 }
@@ -44,18 +47,18 @@
   background-color: rgba(151, 135, 135, 0.74);
   padding: 25px;
   margin: 20px auto;
-  width: 85%;
-  font-family: "Atlas of the Magi";
-  font-size: 18px;
+  width: 80%;
+  font-family: "Atland";
+  font-size: 14px;
   text-align: center;
   color: yellow;
 }
 
-#terminal {
+.terminal {
   background-color: black;
   padding: 30px;
   margin: auto;
-  width: 85%;
+  width: 80%;
   opacity: 0.8;
   align-content: center;
   color: lime;
