@@ -65,9 +65,9 @@
       
       <div class="row">
         
-        <button type="button" class="btn btn-dark col-lg-3 col-md-12">Fancy Door</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12" id="2">Fancy Door</button>
         <button type="button" class="btn btn-dark col-lg-3 col-md-12 rotted-door" id="3">Rotted Door</button>
-        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast">Suspicious Door</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast" id="4">Suspicious Door</button>
         
       </div>
 
@@ -83,7 +83,7 @@
       <div class="row">
 
         <button type="button" class="btn btn-dark col-lg-3 col-md-12" id="5">Take Pendant!</button>
-        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast">ESCAPE!</button>
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 toast" id="6">ESCAPE!</button>
 
       </div>
 
@@ -183,6 +183,7 @@
     document.getElementById("sword").hidden = true;
     });
 
+    /*Buttons that kill you*/
     /*We realize this can be in a for loop, but we didn't want to break anything*/
     document.getElementsByClassName("toast")[0].addEventListener("click", function() {
       document.getElementById("scene1").hidden = true;
@@ -201,6 +202,11 @@
       document.getElementById("scene2").hidden = true;
       document.getElementById("scene3").hidden = true;
       document.getElementById("die").hidden = false;
+    });
+
+    document.getElementById("2").addEventListener("click", function() {
+    document.getElementById("scene1").hidden = true;
+    document.getElementById("scene2.1").hidden = false;
     });
    
   </script>
