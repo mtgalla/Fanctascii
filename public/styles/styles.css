@@ -43,8 +43,8 @@
 .backstoryBlock {
   background-color: rgba(151, 135, 135, 0.74);
   padding: 25px;
+  margin: 20px auto;
   width: 85%;
-  margin: auto;
   font-family: "Atlas of the Magi";
   font-size: 18px;
   text-align: center;
@@ -52,10 +52,19 @@
 }
 
 #terminal {
-  width: 75%;
-  height: 200px;
-  opacity: 0.8;
   background-color: black;
-  color: lime;
+  padding: 30px;
+  margin: auto;
+  width: 85%;
+  opacity: 0.8;
   align-content: center;
+  color: lime;
+}
+
+.btn {
+  margin: 5px;
+}
+
+PRE {
+  color: lime;
 }
