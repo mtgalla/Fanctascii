@@ -54,8 +54,8 @@ module.exports = function(app) {
   // });
   // PUT route for updating character
   app.put("/api/characters/:id", function(req, res) {
-    console.log(req.body.id);
-    db.characters.update(req.body.choice_id, { where: { id: req.params.id } })
+    console.log(req.params.id);
+    db.characters.update({choice_id : req.params.id}, { where: { id: 1 } })
       .then(function(dbcharacters) {
         res.json(dbcharacters);
       });

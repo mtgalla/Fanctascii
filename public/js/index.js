@@ -102,18 +102,16 @@
 
 // Sam starts input of Ajax and Onclick Events here:
 
-$(function() {
   $(".rotted-door").on("click", function(event) {
     event.preventDefault(); 
-    var id = $(this).data("id");
+    var id = $(".rotted-door").attr("id");
     console.log(id);
     // Send the GET request.
-    $.ajax("/" + id, {
-      type: "GET",
-      data: id;
+    $.ajax("/api/characters/" + id, {
+      type: "PUT"
     }).then(
       function() {
-        console.log("display selected ", id;
+        console.log("display selected ", id)
         // Reload the page to get the updated list
         location.reload();
       }
@@ -141,7 +139,7 @@ $(function() {
   //     }
   //   );
   // });
- });
+
          
 
 // Sam ends input of Ajax and Onclick Events here:
