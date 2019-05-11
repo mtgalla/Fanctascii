@@ -66,9 +66,13 @@
 }
 
 .btn {
-  margin: 5px;
+  margin: 5px auto;
 }
 
 .green {
   color: lime;
+}
+
+.center-buttons {
+  margin: auto;
 }
