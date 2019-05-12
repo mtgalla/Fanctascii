@@ -1,5 +1,3 @@
 $(function() {
-	$("#terminal").terminal();
+  $("#terminal").terminal();
 });
-
-

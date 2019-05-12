@@ -4,6 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    // eslint-disable-next-line camelcase
     choice_id: {
       type: DataTypes.INTEGER,
       defaultValue: 0
@@ -12,7 +13,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
-
   });
   // characters.associate = function(models) {
   //   // We're saying that a Post should belong to an Author

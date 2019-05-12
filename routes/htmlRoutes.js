@@ -16,8 +16,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/index.html"));
   });
-
-  }
+};
 
 //   // Load example page and pass in an example by id
 //   app.get("/example/:id", function(req, res) {
