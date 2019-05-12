@@ -44,6 +44,17 @@
   font-style: italic;
 }
 
+.newCharacterInput {
+  background-color: rgba(151, 135, 135, 0.74);
+  padding: 25px;
+  margin: 20px auto;
+  width: 80%;
+  font-family: "Atland";
+  font-size: 14px;
+  text-align: center;
+  color: yellow;
+}
+
 .backstoryBlock {
   background-color: rgba(151, 135, 135, 0.74);
   padding: 25px;
