@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="../public/js/index.js"></script>
+  <!-- <script src="../public/js/index.js"></script> -->
 
 
    <!-- CSS -->
@@ -170,9 +170,13 @@
       document.getElementById("scene2.1").hidden = true;
     };
 
-
+//Added some hidden = true for scene 1 - 3 and for die so that when you start the game again, these all get hidden
     document.getElementById("startGame").addEventListener("click", function() {
     document.getElementById("scene1").hidden = false;
+    document.getElementById("scene2").hidden = true;
+    document.getElementById("scene3").hidden = true;
+    document.getElementById("die").hidden = true;
+    document.getElementById("scene2.1").hidden = true;
     });
 
     document.getElementById("3").addEventListener("click", function() {
