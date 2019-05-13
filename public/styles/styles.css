@@ -127,18 +127,51 @@
 }
 
 .fancy {
-  background-image: url("../assets/img/fancyDoor.jpg");
-  background-size: 100%;
+  /* background-image: url("../assets/img/fancyDoor.jpg");
+  background-size: 100%; */
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: red;
 }
 
 .rotted {
-  background-image: url("../assets/img/rottedDoor.jpeg");
-  background-size: 100%;
+  /* background-image: url("../assets/img/rottedDoor.jpeg");
+  background-size: 100%; */
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: blue;
 }
 
 .suspicious {
-  background-image: url("../assets/img/suspiciousDoor.jpg");
-  background-size: 100%;
+  /* background-image: url("../assets/img/suspiciousDoor.jpg");
+  background-size: 100%; */
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: goldenrod;
+}
+
+.pendant {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: plum;
+}
+
+.escape {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: lightseagreen;
+}
+
+.boat {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: burlywood;
+}
+
+.swim {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: aqua;
 }
 
 .fancy:hover, .rotted:hover, .suspicious:hover {
@@ -151,4 +184,10 @@
   font-size: 20px;
   border-style: outset;
   border-width: 1.5px;
+}
+
+.text {
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
 }
