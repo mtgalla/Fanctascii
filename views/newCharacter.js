@@ -4,14 +4,14 @@ $(document).on("submit", "#name-form", insertNameCharacter);
 let newUserName = [];
 
  
-//function check_empty() {
-//if (document.getElementById("name").value == "") {
-//alert("Please Enter A Name");
-//} else {
-//document.getElementById("form").submit();
-//alert("Form Submitted Successfully...");
-//}
-//}
+function check_empty() {
+if (document.getElementById("name").value == "") {
+alert("Please Enter A Name");
+} else {
+document.getElementById("form").submit();
+alert("Form Submitted Successfully...");
+}
+}
 
 function getNewCharacter() {
     $.get("/api/Characters", function(data) {
