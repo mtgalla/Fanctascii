@@ -4,6 +4,7 @@ $(document).on("submit", "#name-form", insertNameCharacter);
 let newUserName = [];
 
  
+//crappy inherited validation function that doesn't work.
 //function check_empty() {
 //if (document.getElementById("name").value == "") {
 //alert("Please Enter A Name");
@@ -11,7 +12,7 @@ let newUserName = [];
 //document.getElementById("form").submit();
 //alert("Form Submitted Successfully...");
 //}
-}
+//}
 
 function getNewCharacter() {
     $.get("/api/Characters", function(data) {
@@ -28,7 +29,7 @@ function getNewCharacter() {
       complete: false
     };
 
-    $.post("/api/Characters", newUserName, getNewCharacter);
+    $.post("/api/characters", newUserName, getNewCharacter);
     $newCharacterInput.val("");
 }
 });
