@@ -4,9 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- <script src="../public/js/index.js"></script> -->
-
-
    <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -18,15 +15,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
   <title>Project 2, Team 6 | FantASCII</title>
-
-  <script type="text/javascript">
-function check_empty() {
-if (document.getElementById("name").value == "") {
-alert("Please Enter A Name");
-} else {
-document.getElementById("form").submit();
-alert("Form Submitted Successfully...")
-</script>
 
 </head>
 
@@ -183,11 +171,20 @@ alert("Form Submitted Successfully...")
   </div>
 
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-    var $newCharacterInput = $("input.new-character");
+<script type="text/javascript">
+   // $(document).ready(function() {
+    const $newCharacterInput = $("input.new-character");
     $(document).on("submit", "#name-form", insertNameCharacter);
     let newCharacterName = [];
+
+ 
+function check_empty() {
+if (document.getElementById("name").value == "") {
+alert("Please Enter A Name");
+} else {
+document.getElementById("form").submit();
+alert("Form Submitted Successfully...");}
+
 
     // This function inserts a new Character into our database and then updates the view
   function insertNameCharacter(event) {
@@ -206,13 +203,16 @@ alert("Form Submitted Successfully...")
       initializeRows();
     });
   }
-
-
 }
+}
+    
 
 
 
-    //only show the intro on load
+</script>
+<script type="text/javascript">
+
+//only show the intro on load
     window.onload = function() {
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2").hidden = true;
@@ -271,12 +271,7 @@ alert("Form Submitted Successfully...")
   </script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="../public/js/index.js"></script>
-  <!-- jQuery Terminal Hookup, we tried but it was too complicated.
-  <script src="https://unpkg.com/jquery.terminal@2.5.0/js/jquery.terminal.min.js"></script>
-  <link href="https://unpkg.com/jquery.terminal@2.5.0/css/jquery.terminal.min.css"/>
-  <link type="text/javascript" href="../public/js/jQueryTerm.js"/>
-  -->
+  <script src="../public/js/index.js"></script>  
 
 </body>
 
