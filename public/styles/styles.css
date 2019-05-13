@@ -18,6 +18,21 @@
   src: url("../assets/fonts/AtlandBB_r.otf")
 }
 
+@font-face {
+  font-family: "Caeldera"; 
+  src: url("../assets/fonts/Caeldera.ttf")
+}
+
+@font-face {
+  font-family: "Orc Horde"; 
+  src: url("../assets/fonts/OrcHordeBB_Reg.otf")
+}
+
+@font-face {
+  font-family: "Restless Soul"; 
+  src: url("../assets/fonts/RestlessSoulBB-Italic.otf")
+}
+
 #gameTitle {
   margin: 0px;
   font-family: "Moria Citadel";
@@ -25,6 +40,7 @@
   text-align: center;
   align-content: center;
   color: rgb(255, 0, 51);
+  filter: drop-shadow(0px 5px 2.5px #ebde6dd2);
 }
 
 #subtitle {
@@ -78,6 +94,13 @@
 
 .btn {
   margin: 5px auto;
+  border-style: inset;
+  border-width: 1.5px;
+}
+
+.gameButtons {
+  font-family: "Orc Horde";
+  color: yellow;
 }
 
 .green {
@@ -86,4 +109,46 @@
 
 .center-buttons {
   margin: auto;
+}
+
+#startGame {
+  font-family: "Caeldera";
+}
+
+#startGame:hover {
+  font-family: "Caeldera";
+  background-color: crimson;
+  color: whitesmoke;
+}
+
+#dropcap {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.fancy {
+  background-image: url("../assets/img/fancyDoor.jpg");
+  background-size: 100%;
+}
+
+.rotted {
+  background-image: url("../assets/img/rottedDoor.jpeg");
+  background-size: 100%;
+}
+
+.suspicious {
+  background-image: url("../assets/img/suspiciousDoor.jpg");
+  background-size: 100%;
+}
+
+.fancy:hover, .rotted:hover, .suspicious:hover {
+  font-family: "Orc Horde";
+  color: lightcoral;
+}
+
+.dieButton {
+  font-family: "Restless Soul";
+  font-size: 20px;
+  border-style: outset;
+  border-width: 1.5px;
 }
