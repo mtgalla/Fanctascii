@@ -1,8 +1,8 @@
-INSERT INTO choices (choice,createdAt,updatedAt)
+INSERT INTO choices (choice)
 VALUES
-('starting point',NOW(),NOW()),
-('open fancy door',NOW(),NOW()),
-('open rotted door',NOW(),NOW()),
-('open suspicious door',NOW(),NOW()),
-('take pendant',NOW(),NOW()),
-('escape',NOW(),NOW());
+('starting point'),
+('open fancy door'),
+('open rotted door'),
+('open suspicious door'),
+('take pendant'),
+('escape');

@@ -61,4 +61,19 @@ module.exports = function(app) {
         res.json(dbcharacters);
       });
   });
+
+  app.post("/api/characters", function(req, res) {
+    const name = req.body.name;
+
+    if(!name) {
+      return res.status(400);
+    }
+
+    db.characters
+      // eslint-disable-next-line camelcase
+      .create({ name })
+      .then(function(dbcharacters) {
+        res.json(dbcharacters);
+      });
+  });
 };
