@@ -10,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="../public/styles/normalize.css">
   <link rel="stylesheet" type="text/css" href="../public/styles/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant" rel="stylesheet">
-
+git 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+  <script src="../public/js/newCharacter.js"></script>  
   <title>Project 2, Team 6 | FantASCII</title>
 
 </head>
@@ -33,16 +33,17 @@
   <div class="row newCharacterInput">
     <div class="col-md-12">
       
-        <form action="#" id="name-form" method="post" name="form">
-            <h2>What's Your Name?</h2>
-            <hr>
-            <input name="name" class="new-character form-control" placeholder="Name" type="text">
+          <form action="#" id="name-form" method="post" name="form">
+              <h2>What's Your Name?</h2>
+                  <hr>
+  <input name="name" class="new-character form-control" placeholder="Name" type="text">
             <a href="javascript:%20check_empty()" id="submit">
       <button type="button" class="btn btn-warning">Let's Go</button>
-    </a>
-    </form>    
+            </a>
+</input>
+          </form>    
     </div>
-
+  </div>
 
   <div class="row backstoryBlock">
     <div class="col-md-12">
@@ -170,46 +171,6 @@
 
   </div>
 
-
-<script type="text/javascript">
-   // $(document).ready(function() {
-    const $newCharacterInput = $("input.new-character");
-    $(document).on("submit", "#name-form", insertNameCharacter);
-    let newCharacterName = [];
-
- 
-function check_empty() {
-if (document.getElementById("name").value == "") {
-alert("Please Enter A Name");
-} else {
-document.getElementById("form").submit();
-alert("Form Submitted Successfully...");}
-
-
-    // This function inserts a new Character into our database and then updates the view
-  function insertNameCharacter(event) {
-    event.preventDefault();
-    var newUserName = {
-      text: $newCharacterInput.val().trim(),
-      complete: false
-    };
-
-    $.post("/api/Characters", newUserName, getNewCharacter);
-    $newCharacterInput.val("");
-  
-    function getNewCharacter() {
-    $.get("/api/Characters", function(data) {
-      newUserName = data;
-      initializeRows();
-    });
-  }
-}
-}
-    
-
-
-
-</script>
 <script type="text/javascript">
 
 //only show the intro on load
