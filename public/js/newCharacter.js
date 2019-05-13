@@ -11,7 +11,7 @@ let newUserName = [];
 //document.getElementById("form").submit();
 //alert("Form Submitted Successfully...");
 //}
-//}
+}
 
 function getNewCharacter() {
     $.get("/api/Characters", function(data) {
