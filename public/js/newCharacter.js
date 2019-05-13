@@ -15,6 +15,21 @@ let newUserName = [];
 //}
 //}
 
+//$(".secondDoors").on("click", function(event) {
+//  event.preventDefault();
+//  var id = $(this).attr("id");
+//  console.log(id);
+  // Send the GET request.
+//  $.ajax("/api/characters/" + id, {
+//    type: "PUT"
+//  }).then(function() {
+//    console.log("display selected ", id);
+    // Reload the page to get the updated list
+    //location.reload();
+//  });
+//});
+
+
 function getNewCharacter() {
     $.get("/api/characters", function(data) {
       newUserName = data;
