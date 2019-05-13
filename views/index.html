@@ -94,7 +94,7 @@
 
     <div class="col-12 terminal" id="scene3">
 
-        <p class="row text">
+        <p class="row text" id="pendant">
         You are protected from fire!
       </p>
 
@@ -157,20 +157,33 @@
 
     </div>
 
+    <div class="col-12 terminal" id="scene2.2">
+
+      <p class="row text">
+        Something in the water grabs your leg. You fight for air, but eventually pass out. You later find yourself ashore, shaken but alive. A sword lies next to you.
+      </p>
+      
+      <div class="row">
+        <button type="button" class="btn btn-dark col-lg-3 col-md-12 swim gameButtons" id="y">Take Sword!</button>
+      </div>
+
+    </div>
+
   </div>
 
   <script type="text/javascript">
 
-    //only show the intro on load
+    //only show the intro on load; hide everything else
     window.onload = function() {
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2").hidden = true;
       document.getElementById("scene3").hidden = true;
       document.getElementById("die").hidden = true;
       document.getElementById("scene2.1").hidden = true;
+      document.getElementById("scene2.2").hidden = true;
     };
 
-//Added some hidden = true for scene 1 - 3 and for die so that when you start the game again, these all get hidden
+    //Added some hidden = true for scene 1 - 3 and for die so that when you start the game again, these all get hidden
     document.getElementById("startGame").addEventListener("click", function() {
       $("#scene1").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = false;
@@ -178,10 +191,11 @@
       document.getElementById("scene3").hidden = true;
       document.getElementById("die").hidden = true;
       document.getElementById("scene2.1").hidden = true;
+      document.getElementById("scene2.2").hidden = true;
     });
 
     document.getElementById("3").addEventListener("click", function() {
-      $("#scene1").addClass("animated fadeOut");
+      // $("#scene1").addClass("animated fadeOut");
       $("#scene3").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2").hidden = false;
@@ -202,24 +216,18 @@
       // $("#scene1").addClass("animated fadeOut");
       $("#die").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = true;
-      document.getElementById("scene2").hidden = true;
-      document.getElementById("scene3").hidden = true;
       document.getElementById("die").hidden = false;
     });
     document.getElementsByClassName("toast")[1].addEventListener("click", function() {
       // $("#scene2").addClass("animated fadeOut");
       $("#die").addClass("animated fadeIn");
-      document.getElementById("scene1").hidden = true;
       document.getElementById("scene2").hidden = true;
-      document.getElementById("scene3").hidden = true;
       document.getElementById("die").hidden = false;
     });
     document.getElementsByClassName("toast")[2].addEventListener("click", function() {
       // $("#scene2.1").addClass("animated fadeOut");
       $("#die").addClass("animated fadeIn");
-      document.getElementById("scene1").hidden = true;
-      document.getElementById("scene2").hidden = true;
-      document.getElementById("scene3").hidden = true;
+      document.getElementById("scene2.1").hidden = true;
       document.getElementById("die").hidden = false;
     });
 
@@ -228,6 +236,22 @@
       $("#scene2.1").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2.1").hidden = false;
+    });
+
+    document.getElementById("x").addEventListener("click", function() {
+      // $("#scene2.1").addClass("animated fadeOut");
+      $("#scene2.2").addClass("animated fadeIn");
+      document.getElementById("scene2.1").hidden = true;
+      document.getElementById("scene2.2").hidden = false;
+    });
+
+    document.getElementById("y").addEventListener("click", function() {
+      // $("#scene3").addClass("animated fadeOut");
+      $("#5").addClass("animated fadeIn");
+      document.getElementById("scene2.2").hidden = true;
+      document.getElementById("scene3").hidden = false;
+      document.getElementById("pendant").hidden = true;
+      document.getElementById("sword").hidden = false;
     });
    
   </script>
