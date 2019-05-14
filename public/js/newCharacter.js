@@ -1,6 +1,9 @@
 $(document).ready(function() {
 var $newCharacterInput = $("input.new-character");
-$(document).on("submit", "#name-form", insertNameCharacter);
+// $(document).on("submit", "#name-form", insertNameCharacter);
+
+document.getElementById("submit").addEventListener("click", insertNameCharacter);
+
 
 let newUserName = [];
 
@@ -34,13 +37,13 @@ function getNewCharacter() {
     $.get("/api/characters", function(data) {
       newUserName = data;
       initializeRows();
-      console.log(result);
+      console.log(data);
     });
 }
 
     // This function inserts a new Character into our database and then updates the view
   function insertNameCharacter(event) {
-    console.log(result);
+    console.log(event);
     event.preventDefault();
     var newUserName = {
       text: $newCharacterInput.val().trim(),
