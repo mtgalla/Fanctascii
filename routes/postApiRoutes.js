@@ -63,15 +63,16 @@ module.exports = function(app) {
   });
 
   app.post("/api/characters", function(req, res) {
+    // eslint-disable-next-line
     const name = req.body.name;
 
-    if(!name) {
+    if (!name) {
       return res.status(400);
     }
 
     db.characters
       // eslint-disable-next-line camelcase
-      .create({ name })
+      .create({name})
       .then(function(dbcharacters) {
         res.json(dbcharacters);
       });

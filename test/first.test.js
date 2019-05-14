@@ -19,7 +19,7 @@ describe("GET /api/characters", function() {
 
   it("should find all examples", function(done) {
     // Add some examples to the db to test with
-    db.Example.bulkCreate([
+    db.storydb.bulkCreate([
       { text: "First Example", description: "First Description" },
       { text: "Second Example", description: "Second Description" }
     ]).then(function() {
