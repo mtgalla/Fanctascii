@@ -27,26 +27,26 @@ $(".secondDoors").on("click", function(event) {
   });
 });
 //submit button event
-// $(".create-form").on("submit", function(event) {
+$("#submit").on("click", function(event) {
 //   // Make sure to preventDefault on a submit event.
-//   event.preventDefault();
+  event.preventDefault();
 //   // If we need to hard code in a spacebar press, the event is descr below:
 //   //     if (e.keyCode === 32)
 //   //     {
-//   var newCharacter = {
-//     character_name: $("#ca").val().trim(),
-//   };
+  var newCharacter = {
+    name: $(".new-character").val().trim(),
+  };
 //   // Send the POST request.
-//   $.ajax("/", {
-//     type: "POST",
-//     data: newCharacter
-//   }).then(
-//     function() {
-//       console.log("created new Character");
-//       // Reload the page to get the updated list
-//       location.reload();
-//     }
-//   );
-// });
+  $.ajax("/", {
+    type: "POST",
+    data: newCharacter
+  }).then(
+    function() {
+      console.log("created new Character");
+      // Reload the page to get the updated list
+      location.reload();
+    }
+  );
+});
 
 // Sam ends input of Ajax and Onclick Events here:
