@@ -34,22 +34,27 @@
 
   </div>
 
-  <div class="row newCharacterInput">
+  <div class="row newCharacterInput" id="userInput">
     <div class="col-md-12">
       
-          <form action="#" id="name-form" method="post" name="form">
-              <h2>What's Your Name?</h2>
-                  <hr>
-  <input name="name" class="new-character form-control" placeholder="Name" type="text">
-           <!--  <a href="javascript:%20check_empty()"id="submit"> -->
-      <button type="button" class="btn btn-warning" id="submit">Let's Go</button>
-           <!-- </a> -->
-</input>
-          </form>    
+      <form action="#" id="name-form" method="post" name="form">
+        <h2>What's Your Name?</h2>
+
+        <hr>
+
+        <input name="name" class="new-character form-control" placeholder="Name" type="text">
+          <!--  <a href="javascript:%20check_empty()"id="submit"> -->
+          <button type="button" class="btn btn-warning" id="submit">Let's Go</button>
+          <!-- </a> -->
+        </input>
+
+      </form>
+
     </div>
+
   </div>
 
-  <div class="row backstoryBlock">
+  <div class="row backstoryBlock" id="intro">
     <div class="col-md-12">
       
       <p>
@@ -200,7 +205,13 @@
       document.getElementById("scene2.1").hidden = true;
       document.getElementById("scene2.2").hidden = true;
       document.getElementById("game").hidden = true;
+      document.getElementById("intro").hidden = true;
     };
+
+    document.getElementById("submit").addEventListener("click", function() {
+      document.getElementById("userInput").hidden = true;
+      document.getElementById("intro").hidden = false;
+    });
 
     //Added some hidden = true for scene 1 - 3 and for die so that when you start the game again, these all get hidden
     document.getElementById("startGame").addEventListener("click", function() {
