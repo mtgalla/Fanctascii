@@ -39,6 +39,15 @@
   font-size: 100px;
   text-align: center;
   align-content: center;
+
+}
+
+#ascii {
+  color: goldenrod;
+  filter: drop-shadow(0px 5px 2.5px #ff0033d2);
+}
+
+#fant {
   color: rgb(255, 0, 51);
   filter: drop-shadow(0px 5px 2.5px #ebde6dd2);
 }
@@ -179,12 +188,26 @@
   color: lightcoral;
 }
 
-.dieButton {
+.youDied {
   font-family: "Restless Soul";
-  font-size: 20px;
-  border-style: outset;
-  border-width: 1.5px;
+  font-size: 60px;
+  text-align: center;
+  color: crimson;
+  font-weight: bolder;
 }
+
+.startOverText {
+  color: whitesmoke;
+  font-family: 'Cormorant Infant', serif;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* .fa-skull-crossbones {
+  width: 50%;
+  height: 50%;
+} */
 
 .text {
   color: lime;

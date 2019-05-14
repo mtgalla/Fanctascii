@@ -10,6 +10,7 @@
    <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link rel="stylesheet" type="text/css" href="../public/styles/normalize.css">
   <link rel="stylesheet" type="text/css" href="../public/styles/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant" rel="stylesheet">
@@ -26,7 +27,7 @@
   <div class="row">
     
     <div class="col-md-12" id="top" href="#1"> 
-      <h1 id="gameTitle">FantASCII</h1>
+      <h1 id="gameTitle"><span id="fant">Fant</span><span id="ascii">ASCII</span></h1>
       <h3 id="subtitle">A Choose Your Own Adventure Game</h2>
       <h3 id="credits">Jesse Chen | Matt Gallardo | Sam Jacob | Greg Sorkin</h3>
     </div> 
@@ -139,7 +140,9 @@
       </p>
       
       <div class="row">
-        <button type="button" class="btn btn-danger col-lg-3 col-md-12 dieButton">You Died</button>
+        <h2 class="col-12 youDied"><i class="fas fa-skull-crossbones"></i> You Died! <i class="fas fa-skull-crossbones"></i></h2>
+        <br><br>
+        <h4 class="col-12 startOverText">Click the start button above to try again</h4>
       </div>
 
     </div>
@@ -181,10 +184,12 @@
       document.getElementById("die").hidden = true;
       document.getElementById("scene2.1").hidden = true;
       document.getElementById("scene2.2").hidden = true;
+      document.getElementById("game").hidden = true;
     };
 
     //Added some hidden = true for scene 1 - 3 and for die so that when you start the game again, these all get hidden
     document.getElementById("startGame").addEventListener("click", function() {
+      document.getElementById("game").hidden = false;
       $("#scene1").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = false;
       document.getElementById("scene2").hidden = true;
@@ -192,18 +197,17 @@
       document.getElementById("die").hidden = true;
       document.getElementById("scene2.1").hidden = true;
       document.getElementById("scene2.2").hidden = true;
+      
     });
 
     document.getElementById("3").addEventListener("click", function() {
-      // $("#scene1").addClass("animated fadeOut");
-      $("#scene3").addClass("animated fadeIn");
+      $("#scene2").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2").hidden = false;
     });
 
     document.getElementById("5").addEventListener("click", function() {
-      // $("#scene3").addClass("animated fadeOut");
-      $("#5").addClass("animated fadeIn");
+      $("#scene3").addClass("animated fadeIn");
       document.getElementById("scene2").hidden = true;
       document.getElementById("scene3").hidden = false;
       document.getElementById("pendant").hidden = false;
@@ -213,45 +217,40 @@
     /*Buttons that kill you*/
     /*We realize this can be in a for loop, but we didn't want to break anything*/
     document.getElementsByClassName("toast")[0].addEventListener("click", function() {
-      // $("#scene1").addClass("animated fadeOut");
       $("#die").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = true;
       document.getElementById("die").hidden = false;
     });
     document.getElementsByClassName("toast")[1].addEventListener("click", function() {
-      // $("#scene2").addClass("animated fadeOut");
       $("#die").addClass("animated fadeIn");
       document.getElementById("scene2").hidden = true;
       document.getElementById("die").hidden = false;
     });
     document.getElementsByClassName("toast")[2].addEventListener("click", function() {
-      // $("#scene2.1").addClass("animated fadeOut");
       $("#die").addClass("animated fadeIn");
       document.getElementById("scene2.1").hidden = true;
       document.getElementById("die").hidden = false;
     });
 
     document.getElementById("2").addEventListener("click", function() {
-      // $("#scene1").addClass("animated fadeOut");
       $("#scene2.1").addClass("animated fadeIn");
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2.1").hidden = false;
     });
 
     document.getElementById("x").addEventListener("click", function() {
-      // $("#scene2.1").addClass("animated fadeOut");
       $("#scene2.2").addClass("animated fadeIn");
       document.getElementById("scene2.1").hidden = true;
       document.getElementById("scene2.2").hidden = false;
     });
 
     document.getElementById("y").addEventListener("click", function() {
-      // $("#scene3").addClass("animated fadeOut");
-      $("#5").addClass("animated fadeIn");
+      $("#scene3").addClass("animated fadeIn");
       document.getElementById("scene2.2").hidden = true;
       document.getElementById("scene3").hidden = false;
       document.getElementById("pendant").hidden = true;
       document.getElementById("sword").hidden = false;
+
     });
    
   </script>
