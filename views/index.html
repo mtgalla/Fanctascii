@@ -42,12 +42,11 @@
 
         <hr>
 
-        <input name="name" class="new-character form-control" placeholder="Name" type="text">
+        <input name="name" class="new-character form-control" id="userName" placeholder="Name" type="text">
           <!--  <a href="javascript:%20check_empty()"id="submit"> -->
-          <button type="button" class="btn btn-warning" id="submit">Let's Go</button>
           <!-- </a> -->
         </input>
-
+        <button type="button" class="btn btn-warning" id="submit">Let's Go</button>
       </form>
 
     </div>
@@ -58,7 +57,7 @@
     <div class="col-md-12">
       
       <p>
-        <span id="dropcap">Y</span>ou are a young blacksmith from a small community of woodcutters. Deep within the forest of your childhood,
+        <span id="dropcap">Y</span>ou are <span id="inputName">a young blacksmith</span><span id="enteredName"></span> from a small community of woodcutters. Deep within the forest of your childhood,
         there exists an ancient mausoleum with untold mysteries. But you harbor a deep resentment of the forest.
       </p>
 
@@ -196,7 +195,7 @@
 
   <script type="text/javascript">
 
-    //only show the intro on load; hide everything else
+    //Only show the intro on load; hide everything else
     window.onload = function() {
       document.getElementById("scene1").hidden = true;
       document.getElementById("scene2").hidden = true;
@@ -207,6 +206,11 @@
       document.getElementById("game").hidden = true;
       document.getElementById("intro").hidden = true;
     };
+
+    //Adds user-input name to story text
+    $("#submit").click(function(){
+      $("#inputName").replaceWith($("#userName").val().trim());
+    });
 
     document.getElementById("submit").addEventListener("click", function() {
       document.getElementById("userInput").hidden = true;

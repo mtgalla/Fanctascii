@@ -214,3 +214,9 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
 }
+
+#userName, #inputName, #enteredName {
+  color: crimson;
+  font-size: 20px;
+  font-weight: bold;
+}
