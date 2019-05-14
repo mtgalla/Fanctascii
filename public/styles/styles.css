@@ -1,3 +1,217 @@
-.list-group-item {
-  line-height: 2.5;
+.container {
+  background-image: url("../assets/img/tombBG.jpg");
+  background-repeat: no repeat; 
+  background-size: cover;
+  line-height: 1.5;
+  letter-spacing: .16px;
+  align-content: center;
+  display: block;
+} 
+
+@font-face {
+  font-family: "Moria Citadel";
+  src: url("../assets/fonts/MoriaCitadel.TTF");
+}
+
+@font-face {
+  font-family: "Atland"; 
+  src: url("../assets/fonts/AtlandBB_r.otf")
+}
+
+@font-face {
+  font-family: "Caeldera"; 
+  src: url("../assets/fonts/Caeldera.ttf")
+}
+
+@font-face {
+  font-family: "Orc Horde"; 
+  src: url("../assets/fonts/OrcHordeBB_Reg.otf")
+}
+
+@font-face {
+  font-family: "Restless Soul"; 
+  src: url("../assets/fonts/RestlessSoulBB-Italic.otf")
+}
+
+#gameTitle {
+  margin: 0px;
+  font-family: "Moria Citadel";
+  font-size: 100px;
+  text-align: center;
+  align-content: center;
+
+}
+
+#ascii {
+  color: goldenrod;
+  filter: drop-shadow(0px 5px 2.5px #ff0033d2);
+}
+
+#fant {
+  color: rgb(255, 0, 51);
+  filter: drop-shadow(0px 5px 2.5px #ebde6dd2);
+}
+
+#subtitle {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 25px;
+  align-content: center;
+  text-align: center;
+  color: white;
+}
+
+#credits {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 12px;
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+
+.newCharacterInput {
+  background-color: rgba(151, 135, 135, 0.74);
+  padding: 25px;
+  margin: 20px auto;
+  width: 80%;
+  font-family: "Atland";
+  font-size: 14px;
+  text-align: center;
+  color: yellow;
+}
+
+.backstoryBlock {
+  background-color: rgba(151, 135, 135, 0.74);
+  padding: 25px;
+  margin: 20px auto;
+  width: 80%;
+  font-family: "Atland";
+  font-size: 14px;
+  text-align: center;
+  color: yellow;
+}
+
+.terminal {
+  background-color: black;
+  padding: 30px;
+  margin: auto;
+  width: 80%;
+  opacity: 0.8;
+  align-content: center;
+  color: lime;
+}
+
+.btn {
+  margin: 5px auto;
+  border-style: inset;
+  border-width: 1.5px;
+}
+
+.gameButtons {
+  font-family: "Orc Horde";
+  color: yellow;
+}
+
+.green {
+  color: lime;
+}
+
+.center-buttons {
+  margin: auto;
+}
+
+#startGame {
+  font-family: "Caeldera";
+}
+
+#startGame:hover {
+  font-family: "Caeldera";
+  background-color: crimson;
+  color: whitesmoke;
+}
+
+#dropcap {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.fancy {
+  /* background-image: url("../assets/img/fancyDoor.jpg");
+  background-size: 100%; */
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: red;
+}
+
+.rotted {
+  /* background-image: url("../assets/img/rottedDoor.jpeg");
+  background-size: 100%; */
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: blue;
+}
+
+.suspicious {
+  /* background-image: url("../assets/img/suspiciousDoor.jpg");
+  background-size: 100%; */
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: goldenrod;
+}
+
+.pendant {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: plum;
+}
+
+.escape {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: lightseagreen;
+}
+
+.boat {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: burlywood;
+}
+
+.swim {
+  border-style: outset;
+  border-width: 1.5px;
+  border-color: aqua;
+}
+
+.fancy:hover, .rotted:hover, .suspicious:hover {
+  font-family: "Orc Horde";
+  color: lightcoral;
+}
+
+.youDied {
+  font-family: "Restless Soul";
+  font-size: 60px;
+  text-align: center;
+  color: crimson;
+  font-weight: bolder;
+}
+
+.startOverText {
+  color: whitesmoke;
+  font-family: 'Cormorant Infant', serif;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.text {
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+#userName, #inputName, #enteredName {
+  color: crimson;
+  font-size: 20px;
+  font-weight: bold;
 }

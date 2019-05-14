@@ -7,18 +7,20 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "jquery.terminal": "^2.5.0",
     "mysql2": "^1.6.4",
-    "sequelize": "^4.41.2"
+    "nodemon": "^1.19.0",
+    "sequelize": "^4.44.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "chai-http": "^4.0.0",
     "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
