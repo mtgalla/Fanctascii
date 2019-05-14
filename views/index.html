@@ -210,6 +210,16 @@
     //Adds user-input name to story text
     $("#submit").click(function(){
       $("#inputName").replaceWith($("#userName").val().trim());
+      function validateForm() {
+        let isValid = true;
+        $(".form-control").each(function() {
+            if ($(this).val() === "") {
+                isValid = false;
+                alert("Your adventurer will be nameless.");
+            }
+        });
+      };
+      validateForm();
     });
 
     document.getElementById("submit").addEventListener("click", function() {
