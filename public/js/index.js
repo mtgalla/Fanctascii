@@ -37,7 +37,7 @@ $("#submit").on("click", function(event) {
     name: $(".new-character").val().trim(),
   };
 //   // Send the POST request.
-  $.ajax("/", {
+  $.ajax("/api/characters", {
     type: "POST",
     data: newCharacter
   }).then(
