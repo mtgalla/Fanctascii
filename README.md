@@ -5,5 +5,8 @@ A choose your own adventure game that is similar to the 80's text-based game Zor
 
 Will you find the treasure?
 
+## Play the game here
+https://powerful-oasis-44367.herokuapp.com/
+
 ## Story Script
 https://docs.google.com/document/d/1ZBvazb_ie7f3Bied6YvvRjB3g0n_sVYKPcMG13rjbVg/edit
