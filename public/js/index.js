@@ -4,7 +4,7 @@ $(".firstDoors").on("click", function(event) {
   event.preventDefault();
   var id = $(this).attr("id");
   console.log(id);
-  // Send the GET request.
+  // Send the PUT request.
   $.ajax("/api/characters/" + id, {
     type: "PUT"
   }).then(function() {
@@ -17,7 +17,7 @@ $(".secondDoors").on("click", function(event) {
   event.preventDefault();
   var id = $(this).attr("id");
   console.log(id);
-  // Send the GET request.
+  // Send the PUT request.
   $.ajax("/api/characters/" + id, {
     type: "PUT"
   }).then(function() {
@@ -34,9 +34,7 @@ $("#submit").on("click", function(event) {
   //   //     if (e.keyCode === 32)
   //   //     {
   var newCharacter = {
-    name: $(".new-character")
-      .val()
-      .trim()
+    name: $(".new-character").val().trim()
   };
   //   // Send the POST request.
   $.ajax("/api/characters", {
@@ -44,9 +42,11 @@ $("#submit").on("click", function(event) {
     data: newCharacter
   }).then(function() {
     console.log("created new Character");
+    console.log(newCharacter);
     // Reload the page to get the updated list
-    location.reload();
+    //location.reload();
   });
+  return newCharacter;
 });
 
 // Sam ends input of Ajax and Onclick Events here:
