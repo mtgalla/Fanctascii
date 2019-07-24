@@ -1,4 +1,4 @@
-# Project2
+# FANTASCII
 
 ## Description
 A choose your own adventure game that is similar to the 80's text-based game Zork. Users input there character name and make decsions to find out what happens to them.
