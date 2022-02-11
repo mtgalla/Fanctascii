@@ -13,7 +13,7 @@
   "dependencies": {
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.2",
+    "express-handlebars": "^5.3.1",
     "jquery.terminal": "^2.5.0",
     "mysql2": "^1.6.4",
     "nodemon": "^1.19.0",
